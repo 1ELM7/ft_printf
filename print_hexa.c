@@ -41,7 +41,7 @@ void	ft_print_hexa(char format, unsigned long long x, t_src *src)
 	}
 }
 
-void	ft_hexalow_bonus(int tab[6], t_src *src, unsigned long long x)
+void	ft_hexalow_bonus(int tab[6], t_src *src, unsigned int x)
 {
 	int	len;
 
@@ -71,10 +71,10 @@ static void	ft_end_bonus_hexa(t_src *src, int tab[6], int len)
 
 void	ft_hexa_low(va_list arg, t_src *src, int tab[6])
 {
-	unsigned long long	x;
+	unsigned int	x;
 	int					len;
 
-	x = va_arg(arg, unsigned long long);
+	x = va_arg(arg, unsigned int);
 	len = ft_hexalen(x);
 	if (tab[3])
 		len += 2;
@@ -97,10 +97,10 @@ void	ft_hexa_low(va_list arg, t_src *src, int tab[6])
 
 void	ft_hexa_up(va_list arg, t_src *src, int tab[6])
 {
-	unsigned long long	x;
+	unsigned int	x;
 	int					len;
 
-	x = va_arg(arg, unsigned long long);
+	x = va_arg(arg, unsigned int);
 	len = ft_hexalen(x);
 	if (tab[3])
 		len += 2;

@@ -36,7 +36,7 @@ void		ft_checkp(char f, unsigned long long p, t_src *src, int tab[6]);
 void		ft_print_p(va_list arg, t_src *src, int tab[6]);
 
 void		ft_print_hexa(char format, unsigned long long x, t_src *src);
-void		ft_hexalow_bonus(int tab[6], t_src *src, unsigned long long x);
+void		ft_hexalow_bonus(int tab[6], t_src *src, unsigned int x);
 void		ft_hexa_low(va_list arg, t_src *src,
 				int tab[6]);
 void		ft_hexa_up(va_list arg, t_src *src, int tab[6]);
