@@ -6,7 +6,7 @@
 /*   By: jmendez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 08:58:10 by jmendez           #+#    #+#             */
-/*   Updated: 2022/11/17 19:38:54 by jmendez          ###   ########.fr       */
+/*   Updated: 2022/11/18 19:08:45 by jmendez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static void	ft_end_bonus_hexa(t_src *src, int tab[6], int len)
 void	ft_hexa_low(va_list arg, t_src *src, int tab[6])
 {
 	unsigned int	x;
-	int					len;
+	int				len;
 
 	x = va_arg(arg, unsigned int);
 	len = ft_hexalen(x);
@@ -98,7 +98,7 @@ void	ft_hexa_low(va_list arg, t_src *src, int tab[6])
 void	ft_hexa_up(va_list arg, t_src *src, int tab[6])
 {
 	unsigned int	x;
-	int					len;
+	int				len;
 
 	x = va_arg(arg, unsigned int);
 	len = ft_hexalen(x);
