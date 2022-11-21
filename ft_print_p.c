@@ -12,26 +12,26 @@
 
 #include "ft_printf.h"
 
-void	ft_checkp(char f, unsigned long long p, t_src *src, int tab[6])
+void	ft_checkp(const char *f, unsigned long long p, t_src *src, int tab[6])
 {
-	if (!p && !tab[3] && f == 'p')
+	if (!p && !tab[3] && *f == 'p')
 	{
 		write(1, "(nil)", 5);
 		src->len += 5;
 	}
-	else if (f == 'p' || (f == 'x' && tab[3] && p != 0))
+	else if (*f == 'p' || (*f == 'x' && tab[3] && p != 0))
 	{
 		write(1, "0x", 2);
 		src->len += 2;
 	}
-	else if (f == 'X' && tab[3] && p != 0)
+	else if (*f == 'X' && tab[3] && p != 0)
 	{
 		write(1, "0X", 2);
 		src->len += 2;
 	}
 }
 
-void	ft_print_p(va_list arg, t_src *src, int tab[6])
+void	ft_print_p(const char *format, va_list arg, t_src *src, int tab[6])
 {
 	unsigned long long	p;
 	int					len;
@@ -44,9 +44,9 @@ void	ft_print_p(va_list arg, t_src *src, int tab[6])
 	if (tab[0] > 0)
 		while (tab[0]-- > len)
 			ft_putchar(' ', src);
-	ft_checkp('p', p, src, tab);
+	ft_checkp(format, p, src, tab);
 	if (p)
-		ft_print_hexa('p', p, src);
+		ft_print_hexa(format, p, src);
 	if (tab[0] < 0)
 		while (tab[0]++ < -len)
 			ft_putchar(' ', src);

@@ -22,6 +22,8 @@ static int	ft_pass(const char *format)
 		i++;
 		format++;
 	}
+	if (*format != '\0')
+		i++;
 	return (i);
 }
 
@@ -38,7 +40,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			ft_type_arg(arg, ++format, &src);
-			format += ft_pass(format) + 1;
+			format += ft_pass(format);
 		}
 		else
 			format = ft_find_arg(&src, format);

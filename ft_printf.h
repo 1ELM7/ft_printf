@@ -6,7 +6,7 @@
 /*   By: jmendez <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:02:31 by jmendez           #+#    #+#             */
-/*   Updated: 2022/11/17 19:08:54 by jmendez          ###   ########.fr       */
+/*   Updated: 2022/11/21 16:57:48 by jmendez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,15 @@ int			ft_hexalen(unsigned long long n);
 int			ft_unsintlen(unsigned int n);
 int			ft_strlen(const char *str);
 
-void		ft_checkp(char f, unsigned long long p, t_src *src, int tab[6]);
-void		ft_print_p(va_list arg, t_src *src, int tab[6]);
-
-void		ft_print_hexa(char format, unsigned long long x, t_src *src);
-void		ft_hexalow_bonus(int tab[6], t_src *src, unsigned int x);
-void		ft_hexa_low(va_list arg, t_src *src,
+void		ft_checkp(const char *f, unsigned long long p, t_src *src,
 				int tab[6]);
-void		ft_hexa_up(va_list arg, t_src *src, int tab[6]);
+void		ft_print_p(const char *format, va_list arg, t_src *src, int tab[6]);
+
+void		ft_print_hexa(const char *format, unsigned long long x, t_src *src);
+void		ft_hexalow_bonus(const char *format, int tab[6], t_src *src,
+				unsigned int x);
+void		ft_hexa_low(const char *format, va_list arg, t_src *src,
+				int tab[6]);
 
 void		ft_print_unsint(va_list arg, t_src *src, int tab[6]);
 void		ft_printint(va_list arg, t_src *src, int tab[6]);

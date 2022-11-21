@@ -45,6 +45,7 @@ void	ft_checkbonus(const char *format, int tab[6])
 	tab[0] = 0;
 	tab[1] = 0;
 	tab[2] = -1;
+	ft_checkbonus_2(format, tab);
 	while (*format == ' ' || *format == '#' || *format == '+')
 		format++;
 	while ((*format == '-') && (*(format + 1) == '-'))
